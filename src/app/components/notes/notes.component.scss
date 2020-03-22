@@ -1,0 +1,20 @@
+.notebox1{
+    width:40%;
+  }
+.notebox2{
+    width:38%;
+  }
+.textbox{
+    width: 91%;
+    height: 120%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+:host ::ng-deep .mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 10px;
+}

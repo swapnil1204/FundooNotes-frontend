@@ -1,0 +1,63 @@
+<div class="form" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card fxLayout="column" fxFlex="65" fxFlex.xs="100">
+        <div fxLayout="column" fxLayoutAlign="start start" >
+      <div fxLayout="column" fxLayoutGap="13px">
+        <div fxLayout="column" class="fontofFandooNotesApplication">FandooNotesApplication</div>
+        <div fxLayout="column" class="fontofSignin">Create Your Fundoo Account</div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="11px" fxLayoutAlign="center center">
+        <mat-form-field appearance="outline">
+          <mat-label>First name</mat-label>
+          <input matInput placeholder="" [formControl]="firstName" required>
+          <mat-error *ngIf="firstName.invalid">{{getFirstNameErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Last name</mat-label>
+          <input matInput placeholder="" [formControl]="lastName" required>
+          <mat-error *ngIf="lastName.invalid">{{getLastNameErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="column">
+        <mat-form-field appearance="outline" class="email_Outline">
+          <mat-label>Create Email</mat-label>
+          <input matInput placeholder="enter your email" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          <mat-icon matSuffix>mail</mat-icon>
+          <mat-hint>use can use letters,numbers & periods</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="email_Outline">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput placeholder="enter Mobile Number" [formControl]="mobileNumber" required>
+          <!-- <mat-error *ngIf="MobileNumber.invalid">{{getErrorMessage()}}</mat-error> -->
+          <mat-icon matSuffix>mail</mat-icon>
+          <mat-hint>use 10 digits Mobile Number</mat-hint>
+        </mat-form-field>
+        <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start start">
+          <mat-form-field appearance="outline" class="password">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [formControl]="password"
+              required>
+            <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="password">
+            <mat-label>Confirm</mat-label>
+            <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [formControl]="confirmPassword"
+              required>
+            <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+          </mat-form-field>
+          <!-- <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint> -->
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon class="password_icon">{{hide ? 'visibility' : 'visibility'}}</mat-icon>
+            </button>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="205px">
+        <div fxLayout="row">
+          <a mat-flat-button class="anchor" routerLink="/login" >sign in instead</a>
+        </div>
+        <button mat-button mat-raised-button color="primary" (click)="onRegister()">Submit</button>
+      </div>
+        </div>
+    </mat-card>
+  </div>

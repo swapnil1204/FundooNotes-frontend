@@ -1,0 +1,34 @@
+<div class="login-form" fxLayout="row" fxLayoutAlign="space-evenly center">
+    <mat-card fxLayout="column" fxFlex="45" >
+      <div fxLayout="column" fxLayoutGap="11px" fxLayoutAlign="center center">
+        <div class="fontofFandooNotesApplication" fxLayoutAlign="center center">FandooNotesApplication</div>
+        <div class="fontofSignin" fxLayoutAlign="center center">Sign in</div>
+        <div class="fontofwithyourfundooaccount" fxLayoutAlign="center center">with your fundoo account</div>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="enter your email" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          <mat-icon matSuffix>mail</mat-icon>
+        </mat-form-field>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="space-between center">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [formControl]="password"
+            required>
+          <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutGap="0px" fxLayoutAlign="center center">
+        <button mat-button mat-raised-button color="primary" (click)="onLogin()">Login</button>
+        <a  mat-flat-button class="anchor" routerLink="/register" > Create account</a>
+        <a mat-flat-button class="anchor"  routerLink="/forgotpassword" routerLinkActive="active" >Forgot Password?</a>
+      </div>
+    </mat-card>
+  </div>

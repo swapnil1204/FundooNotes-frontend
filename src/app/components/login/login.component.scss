@@ -1,0 +1,33 @@
+@import "../../scss//constant.scss";
+:host ::ng-deep .mat-card {
+  background: #fff;
+  color: rgb(8, 8, 116);
+}
+
+.login-form {
+  @include form;
+}
+
+.fontofSignin {
+  color: orangered;
+  font-size: 20px;
+  font-style: inherit;
+  font-weight: 500;
+}
+
+.fontofwithyourfundooaccount {
+  color: midnightblue;
+  font-weight: 400;
+}
+.fontofFandooNotesApplication{
+  @include fontofFandooNotesApplication; 
+}
+.anchor {
+  @include anchor_color;
+}
+:host ::ng-deep .mat-raised-button.mat-primary {
+  background-color: #1a73e8;
+}
+:host ::ng-deep .mat-form-field-flex {
+    width: 345px;
+}

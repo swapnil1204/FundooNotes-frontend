@@ -1,0 +1,22 @@
+@import "../../scss/constant";
+.form{
+    @include form;
+}
+.fontofFandooNotesApplication{
+    font-size: 22px;
+    font-style: normal;
+    color: midnightblue;
+    font-weight: 600;
+}
+.email_Outline{
+    width:89%
+}
+.password{
+    width:39%
+}
+.password_icon{
+    margin-top: 50%;
+}
+.anchor{
+    @include anchor_color;
+}

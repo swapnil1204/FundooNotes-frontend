@@ -1,0 +1,13 @@
+$_formHeight:96vh;
+@mixin fontofFandooNotesApplication(){
+    font-size: 22px;
+    font-style: normal;
+    color: midnightblue;
+    font-weight: 600;
+}
+@mixin form{
+    height: 96vh;
+  }
+  @mixin anchor_color{
+        color: #1a73e8;
+  }

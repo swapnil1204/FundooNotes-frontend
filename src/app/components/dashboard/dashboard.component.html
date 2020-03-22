@@ -1,0 +1,70 @@
+<mat-toolbar>
+    <div fxLayout="row" fxLayoutGap="40px" fxLayoutAlign="center center" fxFlex=100>
+        <div fxLayoutAlign="space-around center" fxFlex=20>
+            <button type="button" mat-button (click)="drawer.toggle()" flexShow="true">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <img src='../../../assets/keep_48dp.png'>
+            <span>FundooNotes</span>
+        </div>
+        <div fxLayoutAlign="space-around center" fxFlex=50>
+            <mat-card fxLayout="row" class="matcard" fxLayoutGap="5px">
+                <mat-icon>search</mat-icon>
+                <input class="textbox" matInput placeholder="Search">
+            </mat-card>
+        </div>
+        <div fxLayoutAlign="space-between center" fxFlex=20>
+            <div fxLayoutGap="45%">
+                <mat-icon>refresh</mat-icon>
+                <mat-icon>view_agenda</mat-icon>
+                <mat-icon>settings</mat-icon>
+                <div fxLayoutGap="10%"></div>
+            </div>
+            <div fxLayoutGap="45%">
+                <mat-icon>apps</mat-icon>
+                <mat-icon>account_circle</mat-icon>
+            </div>
+        </div>
+    </div>
+</mat-toolbar>
+
+<!-- <div> -->
+    <mat-drawer-container style="margin: 0px" class="example-container">
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+            <mat-nav-list>
+                <mat-list-item class="list_item" routerLink='/dashboard/notes' >
+                    <mat-icon matListIcon ><img src='../../../assets/icons/notes.svg'></mat-icon>
+                    <a matLine>Notes</a>
+                </mat-list-item>
+                <mat-list-item class="list_item">
+                    <mat-icon matListIcon><img src='../../../assets/icons/reminders.svg'></mat-icon>
+                    <a matLine>Reminders</a>
+                </mat-list-item>
+            </mat-nav-list>
+            <mat-divider></mat-divider>
+            <mat-nav-list class="list_item">
+                <div fxLayout="row" fxLayoutGap="100px" class="labels_Font">LABELS</div>
+                <mat-list-item class="list_item">
+                    <mat-icon matListIcon><img src='../../../assets/icons/editLabels.svg'></mat-icon>
+                    <a matLine>Edit Labels</a>
+                </mat-list-item>
+            </mat-nav-list>
+            <mat-divider></mat-divider>
+            <mat-nav-list>
+                <mat-list-item class="list_item" routerLink='/dashboard/archive'>
+                    <mat-icon matListIcon><img src='../../../assets/icons/archive.svg'></mat-icon>
+                    <a matLine>Archive</a>
+                </mat-list-item>
+                <mat-list-item class="list_item" routerLink='/dashboard/trash'>
+                    <mat-icon matListIcon><img src='../../../assets/icons/trash.svg'></mat-icon>
+                    <a matLine>Trash</a>
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-drawer>
+        
+        <app-notes></app-notes>
+        <!-- it loads child component -->
+        <router-outlet></router-outlet>
+        <!-- <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a> -->
+    </mat-drawer-container>
+<!-- </div> -->
