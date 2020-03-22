@@ -15,7 +15,7 @@ export class PracticeComponent implements OnInit {
   StringFromPracticeService :String;
 
   //for search method
-  userName : String;
+  userName :"";
   response : any;
   
   constructor(prac:PracticeServiceService, private http: HttpClient) {
