@@ -10,10 +10,15 @@ click to call : <button (click)="getGitHubUserName()"> get api </button>
 </p>
 
 <div *ngIf="response">
-<p>HERE IS OUTPUT </p>
+<p> HERE WE USE *ngIf directive to hide complete div tag</p>
 <p>login : {{response.login}}</p>
 <p>node_id : {{response.node_id}}</p>
 <p>public_repos : {{response.public_repos}}</p>
 <p>avatar_url : {{response.avatar_url}}</p>
 </div>
 
+<p>HERE we use ? which check response is null then expression {{response?.login}} not evaluated </p>
+<p>login : {{response?.login}}</p>
+<p>node_id : {{response?.node_id}}</p>
+<p>public_repos : {{response?.public_repos}}</p>
+<p>avatar_url : {{response?.avatar_url}}</p>
