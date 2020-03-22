@@ -71,7 +71,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     HttpClientModule,
     MatCheckboxModule
   ],
-  providers: [],
+  providers: [PracticeComponent],
   bootstrap: [AppComponent]
 })
 export class AppMaterialModule { }
