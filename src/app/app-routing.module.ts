@@ -13,6 +13,7 @@ import { TrashComponent } from './components/trash/trash.component';
 import {PracticeComponent} from './components/practice/practice.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
 },
 {path:'signin',component:SignInComponent},
 {path:'signup',component:SignUpComponent},
-{path:'practice',component:PracticeComponent}
+{path:'practice',component:PracticeComponent},
+{path:'home',component:HomeComponent}
 ];
 
 @NgModule({

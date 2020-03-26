@@ -31,6 +31,8 @@ import {PracticeComponent} from './components/practice/practice.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { HomeComponent } from './components/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     //NEW APIS
     PracticeComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    HomeComponent
+    
   ],
   imports: [
     MatFormFieldModule,

@@ -6,12 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import { HttpService} from './services/http/http.service';
-import { NewDashboardComponent } from './components/new-dashboard/new-dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NewDashboardComponent
+    AppComponent
   ],
   imports: [
     AppMaterialModule,
