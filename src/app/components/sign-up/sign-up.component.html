@@ -1,32 +1,32 @@
 <div class="Basic-Form-Height" fxLayout="column" fxLayoutAlign="space-evenly center">
     <mat-card>
-        <form> 
+        <!-- <form>  -->
 
     <div fxLayout="column" fxLayoutAlign="center center"> 
         <mat-form-field appearance="legacy" >
           <mat-label>Username</mat-label>
-          <input matInput placeholder="example@gmail.com">
+          <input matInput placeholder="example@gmail.com" [(ngModel)]='username'>
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
     
         <mat-form-field appearance="legacy">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="****">
+          <input matInput placeholder="****" [(ngModel)]='email'>
           <mat-icon matSuffix>mail</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
 
         <mat-form-field appearance="legacy" >
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="example@gmail.com">
+              <mat-label>password</mat-label>
+              <input matInput placeholder="****" [(ngModel)]='password'>
               <mat-icon matSuffix>lock</mat-icon>
               <mat-hint>Hint</mat-hint>
         </mat-form-field>
         
         <mat-form-field appearance="legacy">
-              <mat-label>Password</mat-label>
-              <input matInput placeholder="****">
+              <mat-label>Confirm Password</mat-label>
+              <input matInput placeholder="****" [(ngModel)]='confirmpassword'>
               <mat-icon matSuffix>lock</mat-icon>
               <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -35,10 +35,10 @@
 
     <div fxLayoutAlign="space-evenly" fxLayout="column" fxLayoutGap="20px">
         <!-- <div fxLayout="row" fxLayoutAlign="space-around stretch"> -->
-    <button mat-stroked-button> Login </button>
+    <a routerLink='/signin'><button mat-stroked-button  class="button-width"  (click)='onSubmit()'> submit </button></a>
     </div>
     
 
-</form> 
+<!-- </form>  -->
 </mat-card>
 </div>

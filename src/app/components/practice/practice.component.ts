@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PracticeServiceService } from 'src/app/practice-service/practice-service.service';
-import { HttpClient } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
-
+import { HttpClient } from '@angular/common/http'
 @Component({
   selector: 'app-practice',
   templateUrl: './practice.component.html',

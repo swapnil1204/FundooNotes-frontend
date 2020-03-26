@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   user:User = new User();
   constructor(private httpService:HttpService,private router:Router) { 
-  }
+  } 
   email = new FormControl('',[Validators.required,Validators.email])
   getErrorMessage(){
     return this.email.hasError('required')?'you must enter email':
@@ -46,7 +46,6 @@ this.router.navigateByUrl('/register');
         this.showSucessMessage = true;
         setTimeout(() => this.showSucessMessage = false, 4000);
         console.log(res);
-
       },
       err => {
         console.log(err)

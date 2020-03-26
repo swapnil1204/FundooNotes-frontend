@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../model/user/user';
+import { AllServicesService } from '../../AllServices/all-services.service';
 
+ 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -7,11 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
-  email :string;
-  password : string;
+  userEmail : string ="fdet@";
+
+  user:User = new User();
+// [ngModel] evaluates the code and generates an output (without two-way binding).
+// [(ngModel)] evaluates the code and generates an output and also enables two-way binding.
+
+  constructor(private AllServices : AllServicesService) { 
+  }
+
+  email;
+  password;
+ 
   ngOnInit() {
     
+  }
+
+  onSignIn(){
+    this.user.email=this.email;
+    this.user.password=this.password
+    console.log('user has following data ',this.user);
+
+    this.AllServices.getRequest(this.user);
   }
 
 }
