@@ -8,6 +8,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetAllnotesComponent } from './components/get-allnotes/get-allnotes.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { ReminderComponent } from './components/reminder/reminder.component';
 
 //new project api
 import {PracticeComponent} from './components/practice/practice.component';
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent ,children:[
     {path:'notes', component:GetAllnotesComponent},
     {path:'archive', component:ArchiveComponent},
-    {path:'trash', component:TrashComponent}
+    {path:'trash', component:TrashComponent},
+    {path:'reminder',component:ReminderComponent}
   ]
 },
 {path:'signin',component:SignInComponent},

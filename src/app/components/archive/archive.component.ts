@@ -7,10 +7,11 @@ import { HttpService } from '../../services/http/http.service';
 })
 
 export class ArchiveComponent implements OnInit {
-  userArchives : any;
+  archiveNotes : any;
   constructor(private httpService:HttpService) { }
 
   ngOnInit() {
+    this.getAllArchives();
   }
   
   showSucessMessage: boolean;
@@ -18,13 +19,13 @@ export class ArchiveComponent implements OnInit {
   
   getAllArchives(){
     console.log('enter in get all notes');
-  this.httpService.get('/isArchive').subscribe(
+  this.httpService.get('/archive').subscribe(
    ( res:any) => {
       this.showSucessMessage = true;
       setTimeout(() => this.showSucessMessage = false, 4000);
-      console.log(res.data);
-      this.userArchives = res.data;
-      console.log('yesss',this.userArchives);
+      console.log("response got ",res);
+      this.archiveNotes = res.result;
+      console.log('response store in ',this.archiveNotes);
     },
     err => {
       console.log(err);

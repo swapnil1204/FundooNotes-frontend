@@ -10,18 +10,19 @@ export class TrashComponent implements OnInit {
   constructor(private httpService:HttpService) { }
 
   ngOnInit() {
+    this.getAllTrash();
   }
   showSucessMessage: boolean;
   serverErrorMessages: string;
   
   getAllTrash(){
     console.log('enter in get all trash');
-  this.httpService.get('/isTrash').subscribe(
+  this.httpService.get('/trash').subscribe(
    ( res:any) => {
       this.showSucessMessage = true;
       setTimeout(() => this.showSucessMessage = false, 4000);
-      console.log(res.data);
-      this.userTrash = res.data;
+      console.log(res.result);
+      this.userTrash = res.result;
       console.log('yesss',this.userTrash);
     },
     err => {

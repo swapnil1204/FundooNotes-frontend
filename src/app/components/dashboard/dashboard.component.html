@@ -34,9 +34,9 @@
             <mat-nav-list>
                 <mat-list-item class="list_item" routerLink='/dashboard/notes' >
                     <mat-icon matListIcon ><img src='../../../assets/icons/notes.svg'></mat-icon>
-                    <a matLine>Notes</a>
+                    <a matLine >Notes </a>
                 </mat-list-item>
-                <mat-list-item class="list_item">
+                <mat-list-item class="list_item" routerLink="/dashboard/reminder">
                     <mat-icon matListIcon><img src='../../../assets/icons/reminders.svg'></mat-icon>
                     <a matLine>Reminders</a>
                 </mat-list-item>
@@ -53,7 +53,7 @@
             <mat-nav-list>
                 <mat-list-item class="list_item" routerLink='/dashboard/archive'>
                     <mat-icon matListIcon><img src='../../../assets/icons/archive.svg'></mat-icon>
-                    <a matLine>Archive</a>
+                    <a matLine>Archive  </a>
                 </mat-list-item>
                 <mat-list-item class="list_item" routerLink='/dashboard/trash'>
                     <mat-icon matListIcon><img src='../../../assets/icons/trash.svg'></mat-icon>
@@ -62,6 +62,7 @@
             </mat-nav-list>
         </mat-drawer>
         
+        <!-- <app-get-allnotes></app-get-allnotes> -->
         <app-notes></app-notes>
         <!-- it loads child component -->
         <router-outlet></router-outlet>

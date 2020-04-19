@@ -1,10 +1,10 @@
 <div fxFlex="100%" class="small_notes" fxLayout="row wrap" fxLayoutAlign="center center" style="margin-top:20px">
-    <mat-card  style="margin:10px" fxflex="25%" *ngFor='let trashItem of userTrash' class=".small_notes_width">
+    <mat-card  style="margin:10px" fxflex="25%" *ngFor='let notesItem of userNotes' class=".small_notes_width">
         <mat-card-title>
-            {{trashItem.title}}
+            {{notesItem.title}}
         </mat-card-title>
         <mat-card-content>
-            {{trashItem.description}}
+            {{notesItem.description}}
         </mat-card-content>
         <app-icons></app-icons>
     </mat-card>

@@ -24,14 +24,14 @@ export class HttpService {
   
   get(url){
     console.log(this.token);
-
-   const httpOptions  = {
+    const httpOptions  = {
     headers:new HttpHeaders({
       'token' : this.token
      })
    }
    let response = this.http.get(environment.baseUrl + url,httpOptions);
+   console.log("requesting url ",environment.baseUrl + url);
+   console.log("response is = = " ,response);
    return response;
   }
 }
-

@@ -1,2 +1,18 @@
-<p>archive works!</p><p>archive works!</p>
+<!-- <p>archive works!</p>
+<p *ng-For="let archiveNotesItem of archiveNotes">
+    <p >{{archiveNotesItem.title}}</p>
+    <p>{{archiveNotesItem.description}}</p>
+<p> -->
 
+
+<div fxFlex="100%" class="small_notes" fxLayout="row wrap" fxLayoutAlign="center center" style="margin-top:20px">
+    <mat-card  style="margin:10px" fxflex="25%" *ngFor='let notesItem of archiveNotes' class=".small_notes_width">
+        <mat-card-title>
+            {{notesItem.title}}
+        </mat-card-title>
+        <mat-card-content>
+            {{notesItem.description}}
+        </mat-card-content>
+        <app-icons></app-icons>
+    </mat-card>
+</div>

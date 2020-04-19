@@ -25,9 +25,9 @@ export class GetAllnotesComponent implements OnInit {
       (res: any) => {
         this.showSucessMessage = true;
         setTimeout(() => this.showSucessMessage = false, 4000);
-        console.log(res.data);
-        this.userNotes = res.data;
-        console.log('yesss', this.userNotes);
+        console.log("response got in get all notes compo ", res);
+        this.userNotes = res.result;
+        console.log('response taken in usernotes ', this.userNotes);
       },
       err => {
         console.log(err);

@@ -41,8 +41,8 @@ this.router.navigateByUrl('/register');
     .subscribe(
       (res:any) => {
         console.log('before hiting',res);
-        console.log('before hiting',res.response.tokenSetInRedisCache);
-        localStorage.setItem('token', res.response.tokenSetInRedisCache)
+        console.log('before hiting token is ',res.token);
+        localStorage.setItem('token', res.token)
         this.showSucessMessage = true;
         setTimeout(() => this.showSucessMessage = false, 4000);
         console.log(res);
