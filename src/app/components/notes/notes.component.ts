@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../../services/http/http.service';
+import { Notes } from 'src/app/model/user/notes';
 
 @Component({
   selector: 'app-notes',
@@ -8,12 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class NotesComponent implements OnInit {
 
   popUp=false;
+  userNotes:Notes=new Notes();
+  title : string = "DEFAULT VALU IS ";
+  description : string;
 
-  constructor() {
-    
-   }
+  constructor(private httpService : HttpService) {
+  }
 
   ngOnInit() {
+    
   }
 
   
@@ -21,5 +26,15 @@ export class NotesComponent implements OnInit {
     console.log(1)
     this.popUp = true;
   }
+  
+  addNotes(){
+    this.userNotes.title = this.title;
+    this.userNotes.description = this.description;
+    console.log(" title = "+this.title+" "+" description = "+this.description);
+    this.httpService.posting(this.userNotes,'/notes').subscribe((res:any)=>{ 
+        console.log(' response is = ',res);
+        this.popUp=false;
+    })
 
+  }
 }

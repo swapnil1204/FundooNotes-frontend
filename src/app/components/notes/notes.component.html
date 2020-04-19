@@ -16,18 +16,27 @@
         </div>
     </mat-card>
 </div>
+
 <div fxLayout="column" fxLayoutAlign="space-around center" class="mat-drawer-container">
     <mat-card *ngIf="popUp" class="notebox2">
         <div fxLayoutGap="20px">
-            <input class="textbox" matInput placeholder="Title...">
+            <input class="textbox" matInput placeholder="Title..." [(ngModel)]="title">
             <mat-icon>
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+CiAgPHBhdGggZmlsbD0iIzAwMCIgZD0iTTE3IDR2N2wyIDN2MmgtNnY1bC0xIDEtMS0xdi01SDV2LTJsMi0zVjRjMC0xLjEuOS0yIDItMmg2YzEuMTEgMCAyIC44OSAyIDJ6TTkgNHY3Ljc1TDcuNSAxNGg5TDE1IDExLjc1VjRIOXoiLz4KPC9zdmc+Cg==">
             </mat-icon>
              </div>
         <div fxLayoutGap="40px">
-            <input class="textbox" matInput placeholder="Take a note...">
+            <input class="textbox" matInput placeholder="Take a note..." [(ngModel)]="description">
         </div>
         <div fxLayoutGap="60px">
-            <app-icons></app-icons></div>
+            <app-icons></app-icons>
+            <button (click)="addNotes()">closess</button>
+            </div>
+            
     </mat-card>
+</div>
+
+<div>
+{{description}}
+{{title}}
 </div>

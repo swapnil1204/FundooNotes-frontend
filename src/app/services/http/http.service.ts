@@ -34,4 +34,19 @@ export class HttpService {
    console.log("response is = = " ,response);
    return response;
   }
+
+
+  posting(user, url) {
+    console.log(this.token);
+    const httpOptions = {
+      headers : new HttpHeaders({  
+        'token': this.token 
+        }) 
+    }
+    let response = this.http.post(environment.baseUrl + url, user,httpOptions);
+    console.log('i am in user request method http service');
+    console.log('hitting at ',environment.baseUrl + url);
+    console.log('data is ',user);
+    return response;
+  }
 }
