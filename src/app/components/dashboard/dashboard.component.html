@@ -17,8 +17,20 @@
             <div fxLayoutGap="45%">
                 <button (click)="refresh()"><mat-icon>refresh</mat-icon></button>
                 <mat-icon>view_agenda</mat-icon>
-                <mat-icon>settings</mat-icon>
-                <div fxLayoutGap="10%"></div>
+                <!-- <mat-icon>settings</mat-icon> -->
+
+                <button mat-button [matMenuTriggerFor]="menu"><mat-icon>settings</mat-icon></button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item>Settings</button>
+                  <button mat-menu-item>Enabled dark theme</button>
+                  <button mat-menu-item>Send feedback</button>
+                  <button mat-menu-item>Help</button>
+                  <button mat-menu-item>App downloads</button>
+                  <button mat-menu-item>keyboard shortcuts</button>
+                </mat-menu>
+
+
+                <!-- <div fxLayoutGap="10%"></div> -->
             </div>
             <div fxLayoutGap="45%">
                 <mat-icon>apps</mat-icon>
