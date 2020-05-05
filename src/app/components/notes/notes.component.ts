@@ -11,7 +11,7 @@ export class NotesComponent implements OnInit {
 
   popUp=false;
   userNotes:Notes=new Notes();
-  title : string = "DEFAULT VALU IS ";
+  title : string = "";
   description : string;
 
   constructor(private httpService : HttpService) {

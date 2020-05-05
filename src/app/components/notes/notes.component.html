@@ -29,14 +29,11 @@
             <input class="textbox" matInput placeholder="Take a note..." [(ngModel)]="description">
         </div>
         <div fxLayoutGap="60px">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
             <app-icons></app-icons>
-            <button (click)="addNotes()">closess</button>
+            <button (click)="addNotes()">close</button>
             </div>
-            
+        </div>    
     </mat-card>
 </div>
 
-<div>
-{{description}}
-{{title}}
-</div>
