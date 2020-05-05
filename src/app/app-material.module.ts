@@ -26,7 +26,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotesComponent } from './components/notes/notes.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
-import { ReminderComponent } from './components/reminder/reminder.component'; 
+import { ReminderComponent } from './components/reminder/reminder.component';
+import { RefreshComponent } from './refresh/refresh.component';
+
 
 import {PracticeComponent} from './components/practice/practice.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
@@ -49,6 +51,7 @@ import { HomeComponent } from './components/home/home.component';
     ArchiveComponent,
     TrashComponent,
     ReminderComponent,
+    RefreshComponent,
 
     //NEW APIS
     PracticeComponent,

@@ -9,6 +9,8 @@ import { GetAllnotesComponent } from './components/get-allnotes/get-allnotes.com
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { ReminderComponent } from './components/reminder/reminder.component';
+import { RefreshComponent } from './refresh/refresh.component';
+
 
 //new project api
 import {PracticeComponent} from './components/practice/practice.component';
@@ -29,6 +31,9 @@ const routes: Routes = [
     {path:'reminder',component:ReminderComponent}
   ]
 },
+{path:'refresh',component:RefreshComponent},
+
+
 {path:'signin',component:SignInComponent},
 {path:'signup',component:SignUpComponent},
 {path:'practice',component:PracticeComponent},
